@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState<boolean>(false);
   const sideMenuRef = useRef<null | HTMLUListElement>(null);
 
   const openMenu = () => {
@@ -14,10 +15,29 @@ const Navbar = () => {
       sideMenuRef.current.style.transform = "translateX(16rem)";
     }
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
+
   return (
     <div>
-      <nav className=" absolute w-full flex justify-center items-center pt-[19px] z-50">
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-3 bg-white shadow-sm bg-opacity-50">
+      <nav
+        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex justify-center items-center z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-3 ${
+            isScroll ? "" : "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm"
+          }`}
+        >
           <li>
             <a href="#top">Home</a>
           </li>
