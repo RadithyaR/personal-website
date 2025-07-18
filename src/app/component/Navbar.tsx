@@ -16,7 +16,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <nav className="w-full flex justify-center items-center pt-[19px]">
+      <nav className=" absolute w-full flex justify-center items-center pt-[19px] z-50">
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-3 bg-white shadow-sm bg-opacity-50">
           <li>
             <a href="#top">Home</a>
