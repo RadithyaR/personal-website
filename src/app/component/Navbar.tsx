@@ -29,13 +29,17 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex justify-center items-center z-50 ${
-          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex justify-center items-center z-50  ${
+          isScroll
+            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-gray-700 dark:bg-opacity-50"
+            : "dark:bg-[#121212]"
         }`}
       >
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-3 ${
-            isScroll ? "" : "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm"
+            isScroll
+              ? ""
+              : "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-gray-700"
           }`}
         >
           <li>
@@ -79,7 +83,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen dark:bg-gray-700 transition duration-500"
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image

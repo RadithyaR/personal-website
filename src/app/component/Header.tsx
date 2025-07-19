@@ -13,17 +13,17 @@ const Header = () => {
         />
       </div>
 
-      <h3 className="font-ovo text-xl sm:text-2xl font-normal leading-relaxed">
+      <h3 className="font-ovo text-xl sm:text-2xl font-normal leading-relaxed dark:text-[#E0E0E0]">
         Hi! I am Radithya Romero Al Giffary
       </h3>
 
       <div className="h-auto min-h-[100px] w-full max-w-[847px] flex justify-center items-center ">
-        <h1 className="font-ovo text-3xl sm:text-6xl lg:text-[66px] font-normal leading-[85px] text-center ">
+        <h1 className="font-ovo text-3xl sm:text-6xl lg:text-[66px] font-normal leading-[85px] text-center dark:text-[#E0E0E0]">
           Full-Stack Web Developer
         </h1>
       </div>
 
-      <p className="max-w-2xl mx-auto font-ovo text-base sm:text-lg leading-relaxed">
+      <p className="max-w-2xl mx-auto font-ovo text-base sm:text-lg leading-relaxed dark:text-[#E0E0E0]">
         I am a full-stack developer who builds web applications from front to
         back. I work with React, NextJS, Node.js, and databases like mySQL,
         MongoDB, or PostgreSQL to create fast, user-friendly apps. Let's make
@@ -39,7 +39,7 @@ const Header = () => {
         </a>
         <a
           href="#resume"
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center"
+          className="px-10 py-3 border rounded-full border-gray-500 flex items-center dark:text-[#E0E0E0]"
         >
           My Resume
         </a>
