@@ -56,29 +56,38 @@ export const skillsData: ISkills[] = [
 
 interface IProject {
   title: string;
-  description: string;
+  tech: string;
   bgImage: string;
+  description?: string;
 }
 export const projectData: IProject[] = [
   {
-    title: "Project 1",
-    description: "description 1",
+    title: "EcoShop Marketplace",
+    tech: "React, Node.js, MongoDB, Tailwind CSS",
     bgImage: "/asset/project.png",
+    description:
+      "Developed a sustainable product marketplace to connect eco-friendly brands with conscious consumers, built with a responsive React frontend and Node.js backend, implementing secure payments and carbon footprint calculators which resulted in 120+ vendor signups within the first month.",
   },
   {
-    title: "Project 2",
-    description: "description 2",
+    title: "HealthTrack Pro",
+    tech: "Vue.js, Firebase, Chart.js",
     bgImage: "/asset/project.png",
+    description:
+      "Created a wellness dashboard for fitness enthusiasts to monitor workouts and nutrition, featuring real-time data visualization through Chart.js and Firebase integration, helping users achieve 30% better consistency in their health routines through personalized tracking.",
   },
   {
-    title: "Project 3",
-    description: "description 3",
+    title: "CodeCollab IDE",
+    tech: "TypeScript, WebSockets, Monaco Edito",
     bgImage: "/asset/project.png",
+    description:
+      "Designed a browser-based collaborative coding environment with live pairing functionality using WebSockets, enabling remote teams to solve programming challenges together with shared cursor positions and instant code execution, now used by 15+ coding bootcamps.",
   },
   {
-    title: "Project 4",
-    description: "description 4",
+    title: "UrbanBites Food Delivery",
+    tech: "Next.js, Stripe API, Mapbox",
     bgImage: "/asset/project.png",
+    description:
+      "Built a hyperlocal food delivery platform with real-time order tracking using Mapbox and Next.js ISR, reducing average delivery times by 25% through optimized route algorithms and vendor proximity matching in urban areas.Built a hyperlocal food delivery platform with real-time order tracking using Mapbox and Next.js ISR, reducing average delivery times by 25% through optimized route algorithms and vendor proximity matching in urban areas.",
   },
 ];
 

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { projectData } from "../assets/assets";
 import Image from "next/image";
 
 const Project = () => {
+  const [clickProject, setClickProject] = useState<null | number>(null);
+
+  const handleProject = (index: number) => {
+    setClickProject(clickProject === index ? null : index);
+  };
+
   return (
     <div id="portofolio" className="w-full px-[10%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-ovo dark:text-[#E0E0E0]">
@@ -22,26 +28,40 @@ const Project = () => {
           <div
             key={index}
             className="flex-shrink-0 w-[80vw] snap-center aspect-square rounded-lg relative cursor-pointer group overflow-hidden md:w-full"
+            onClick={() => handleProject(index)}
           >
             <div
               className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
               style={{ backgroundImage: `url(${project.bgImage})` }}
             ></div>
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 dark:bg-gray-100">
+            <div
+              className={`bg-white rounded-md absolute ${
+                clickProject === index
+                  ? "bottom-5 left-1/2 -translate-x-1/2 w-10/12 h-10/12 px-3 "
+                  : "bottom-5 left-1/2 -translate-x-1/2 w-10/12 py-3 px-5"
+              } flex items-center justify-between duration-500 dark:bg-gray-100`}
+            >
               <div>
-                <h2 className="font-semibold dark:text-gray-900">
-                  {project.title}
-                </h2>
-                <p className="text-sm text-gray-700">{project.description}</p>
-              </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gray-300 transition">
-                <Image
-                  src="/asset/send-icon.png"
-                  alt="send-icon"
-                  width={20}
-                  height={20}
-                  className="w-5"
-                />
+                <div
+                  className={`transition-all duration-500 ${
+                    clickProject === index
+                      ? "opacity-0 h-0 overflow-hidden"
+                      : "opacity-100 h-auto"
+                  }`}
+                >
+                  <h2 className="font-semibold dark:text-gray-900">
+                    {project.title}
+                  </h2>
+                  <p className="text-sm text-gray-700">{project.tech}</p>
+                </div>
+
+                {clickProject === index && (
+                  <div className="mt-3 max-h-[200px] overflow-y-auto">
+                    <p className="text-gray-700 text-xs sm:text-sm leading-[24px]">
+                      {project.description}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
