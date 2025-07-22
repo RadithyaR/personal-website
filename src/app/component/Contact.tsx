@@ -42,7 +42,7 @@ const Contact = () => {
                 `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_APPLICATION_ID}/${process.env.NEXT_PUBLIC_REST_API_KEY}/data/form_contact`,
                 payload
               );
-              resetForm();
+              resetForm(); //resetForm untuk menghapus setelah submit
               toast.success("Message Sent Successfully!");
             } catch (error) {
               toast.error("Failed to send message");
