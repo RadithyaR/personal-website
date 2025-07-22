@@ -1,6 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import { socmed } from "../assets/assets";
+import * as Yup from "yup";
+import { Formik } from "formik";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const formSchema = Yup.object({
+  name: Yup.string().required(),
+  email: Yup.string().email().required(),
+  message: Yup.string().required(),
+});
 
 const Contact = () => {
   return (
@@ -20,37 +31,79 @@ const Contact = () => {
       </p>
 
       <div className="max-w-lg mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <input
-            type="text"
-            placeholder="Enter Your Name"
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-            required
-          ></input>
-          <input
-            type="email"
-            placeholder="Enter Your Email"
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-            required
-          ></input>
-        </div>
+        <Formik
+          initialValues={{ name: "", email: "", message: "" }}
+          validationSchema={formSchema}
+          onSubmit={async (values, { resetForm }) => {
+            try {
+              const payload = { id: 4, ...values };
 
-        <div className="mb-6">
-          <textarea
-            placeholder="Enter your Message"
-            rows={5}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-            required
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 dark:bg-gray-700 dark:hover:bg-gray-800"
+              await axios.post(
+                `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_APPLICATION_ID}/${process.env.NEXT_PUBLIC_REST_API_KEY}/data/form_contact`,
+                payload
+              );
+              resetForm();
+              toast.success("Message Sent Successfully!");
+            } catch (error) {
+              toast.error("Failed to send message");
+            }
+          }}
         >
-          Send Message
-        </button>
+          {(formikProps) => {
+            const { errors, touched, handleSubmit, getFieldProps } =
+              formikProps;
 
+            return (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <input
+                      {...getFieldProps("name")}
+                      type="text"
+                      placeholder="Enter Your Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                    />
+                    {errors.name && touched.name && (
+                      <p className="text-red-600">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <input
+                      {...getFieldProps("email")}
+                      type="email"
+                      placeholder="Enter Your Email"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                    />
+                    {errors.email && touched.email && (
+                      <p className="text-red-600">{errors.email}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <textarea
+                    {...getFieldProps("message")}
+                    placeholder="Enter your Message"
+                    rows={5}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                  />
+                  {errors.message && touched.message && (
+                    <p className="text-red-600">{errors.message}</p>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 dark:bg-gray-700 dark:hover:bg-gray-800 cursor-pointer"
+                  onClick={() => handleSubmit()}
+                >
+                  Send Message
+                </button>
+              </div>
+            );
+          }}
+        </Formik>
         <div className="flex items-center mt-5 ">
           <ul className="flex items-center gap-3 sm:gap-5 mx-auto">
             {socmed.map((tool, index) => (

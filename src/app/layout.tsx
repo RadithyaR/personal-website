@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${outfit.variable} ${ovo.variable} antialiased leading-8 overflow-x-hidden`}
       >
         {children}
+        <ToastContainer position="bottom-right" autoClose={3000} />
       </body>
     </html>
   );
