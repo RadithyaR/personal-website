@@ -16,7 +16,7 @@ const About = () => {
         <div className="w-full lg:w-auto flex justify-center lg:block">
           <div className="w-64 sm:w-80 sm:h-80 rounded-2xl flex-none">
             <Image
-              src="/me.png"
+              src="/me.webp"
               alt="profile_photo"
               width={320}
               height={400}

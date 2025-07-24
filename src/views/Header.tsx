@@ -6,7 +6,7 @@ const Header = () => {
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div className="relative  w-[120px] h-[120px] sm:w-[158px] sm:h-[158px] my-4">
         <Image
-          src="/me_circle.png"
+          src="/me_circle.webp"
           alt="me_circle"
           fill
           className="object-cover"

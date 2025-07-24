@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
-import Navbar from "./component/Navbar";
-import Header from "./component/Header";
-import About from "./component/About";
-import Skills from "./component/Skills";
-import Project from "./component/Project";
-import Experience from "./component/Experience";
-import Testimony from "./component/Testimony";
-import Contact from "./component/Contact";
+import Navbar from "../views/Navbar";
+import Header from "../views/Header";
+import About from "../views/About";
+import Skills from "../views/Skills";
+import Project from "../views/Project";
+import Experience from "../views/Experience";
+import Testimony from "../views/Testimony";
+import Contact from "../views/Contact";
 
 export default function Home() {
   return (
