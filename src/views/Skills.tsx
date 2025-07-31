@@ -4,10 +4,7 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div
-      id="skills"
-      className="w-full px-[5%] sm:px-[10%] lg:px-[20%] py-10 scroll-mt-20"
-    >
+    <div id="skills" className="w-full px-[5%] sm:px-[10%] lg:px-[20%] py-10">
       <h4 className="text-center mb-2 text-lg font-ovo dark:text-[#E0E0E0]">
         What I Offer
       </h4>

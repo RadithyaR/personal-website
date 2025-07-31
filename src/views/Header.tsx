@@ -38,7 +38,7 @@ const Header = () => {
           Contact Me
         </a>
         <a
-          href="#resume"
+          href="#portofolio"
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center dark:text-[#E0E0E0]"
         >
           My Resume
