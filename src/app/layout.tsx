@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${outfit.variable} ${ovo.variable} antialiased leading-8 overflow-x-hidden`}
       >
         {children}
-        <ToastContainer position="bottom-right" autoClose={3000} />
+        <ToastContainer autoClose={3000} />
       </body>
     </html>
   );
