@@ -30,7 +30,7 @@ const About = () => {
             As a fresh Computer Science graduate with a passion for web
             development, I specialize in building modern full-stack applications
             using React, Next.js, Node.js, and PostgreSQL. Through academic
-            projects and personal explorations, I've developed strong
+            projects and personal explorations, I have developed strong
             problem-solving skills and attention to detail in writing clean,
             efficient code. I thrive in collaborative environments and am
             committed to continuous learning to stay updated with emerging

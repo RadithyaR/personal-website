@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { projectData } from "../assets/assets";
-import Image from "next/image";
 
 const Project = () => {
   const [clickProject, setClickProject] = useState<null | number>(null);
@@ -19,7 +18,7 @@ const Project = () => {
       </h2>
 
       <p className="text-center mx-auto mt-5 mb-12 lg:mb-10 max-w-2xl  font-ovo dark:text-[#E0E0E0]">
-        Welcome to my creative space! Here you'll find a collection of my
+        Welcome to my creative space! Here you will find a collection of my
         proudest projects, each crafted with passion and precision.
       </p>
 

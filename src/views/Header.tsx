@@ -26,7 +26,7 @@ const Header = () => {
       <p className="max-w-2xl mx-auto font-ovo text-base sm:text-lg leading-relaxed dark:text-[#E0E0E0]">
         I am a full-stack developer who builds web applications from front to
         back. I work with React, NextJS, Node.js, and databases like mySQL,
-        MongoDB, or PostgreSQL to create fast, user-friendly apps. Let's make
+        MongoDB, or PostgreSQL to create fast, user-friendly apps. Lets make
         something great together.
       </p>
 

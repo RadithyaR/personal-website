@@ -15,7 +15,7 @@ const Testimony = () => {
         Testimonial
       </h2>
       <p className="text-center mx-auto mt-5 mb-12 lg:mb-10 max-w-2xl  font-ovo dark:text-[#E0E0E0]">
-        Welcome to my testimonial section! Here you'll find genuine feedback
+        Welcome to my testimonial section! Here you will find genuine feedback
         from colleagues and clients about our work together.
       </p>
 
@@ -28,7 +28,7 @@ const Testimony = () => {
             >
               <div className="flex flex-col h-full">
                 <p className="text-gray-600 text-[16px] dark:text-gray-300 mb-5 flex-grow">
-                  "{test.message}"
+                  {test.message}
                 </p>
 
                 <div className="flex flex-row justify-between gap-5">

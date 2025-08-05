@@ -23,8 +23,8 @@ const Contact = () => {
         Get In Touch
       </h2>
       <p className="text-center mx-auto mt-5 mb-12 lg:mb-10 max-w-2xl  font-ovo dark:text-[#E0E0E0]">
-        I'd love to hear from you! Whether it's a project inquiry or just to say
-        hello, this is the place to do it.
+        I would love to hear from you! Whether it is a project inquiry or just
+        to say hello, this is the place to do it.
       </p>
 
       <div className="max-w-lg mx-auto">
