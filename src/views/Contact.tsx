@@ -33,16 +33,17 @@ const Contact = () => {
           validationSchema={formSchema}
           onSubmit={async (values, { resetForm }) => {
             try {
-              const payload = { id: 4, ...values };
+              const payload = { ...values };
 
               await axios.post(
-                `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_APPLICATION_ID}/${process.env.NEXT_PUBLIC_REST_API_KEY}/data/form_contact`,
+                `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_APPLICATION_ID}/${process.env.NEXT_PUBLIC_REST_API_KEY}/data/contacts`,
                 payload
               );
               resetForm(); //resetForm untuk menghapus setelah submit
               toast.success("Message Sent Successfully!");
             } catch (error) {
               toast.error("Failed to send message");
+              console.log(error);
             }
           }}
         >
