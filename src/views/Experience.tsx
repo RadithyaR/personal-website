@@ -36,9 +36,9 @@ const Experience = () => {
               <p className="text-gray-600 dark:text-gray-300 font-medium mt-1">
                 {exp.company}
               </p>
-              <p className="text-gray-600 dark:text-gray-300 font-medium">
+              {/* <p className="text-gray-600 dark:text-gray-300 font-medium">
                 {exp.responsibilities}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}
