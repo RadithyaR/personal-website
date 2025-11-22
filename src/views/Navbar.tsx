@@ -58,9 +58,6 @@ const Navbar = () => {
             <a href="#experience">Experience</a>
           </li>
           <li>
-            <a href="#testimony">Testimony</a>
-          </li>
-          <li>
             <a href="#contact">Contact Me</a>
           </li>
         </ul>
@@ -116,11 +113,6 @@ const Navbar = () => {
           <li>
             <a href="#experience" onClick={closeMenu}>
               Experience
-            </a>
-          </li>
-          <li>
-            <a href="#testimony" onClick={closeMenu}>
-              Testimony
             </a>
           </li>
           <li>

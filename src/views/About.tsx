@@ -27,7 +27,7 @@ const About = () => {
 
         <div className="flex flex-col">
           <p className="mb-8 lg:mb-10 max-w-2xl font-ovo dark:text-[#E0E0E0]">
-            As a fresh Computer Science graduate with a passion for web
+            As a fresh Information System graduate with a passion for web
             development, I specialize in building modern full-stack applications
             using React, Next.js, Node.js, and PostgreSQL. Through academic
             projects and personal explorations, I have developed strong

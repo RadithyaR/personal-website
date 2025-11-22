@@ -19,14 +19,14 @@ const Header = () => {
 
       <div className="h-auto min-h-[100px] w-full max-w-[847px] flex justify-center items-center ">
         <h1 className="font-ovo text-3xl sm:text-6xl lg:text-[66px] font-normal leading-[85px] text-center dark:text-[#E0E0E0]">
-          Full-Stack Web Developer
+          Full Stack Web Developer
         </h1>
       </div>
 
       <p className="max-w-2xl mx-auto font-ovo text-base sm:text-lg leading-relaxed dark:text-[#E0E0E0]">
-        I am a full-stack developer who builds web applications from front to
-        back. I work with React, NextJS, Node.js, and databases like mySQL,
-        MongoDB, or PostgreSQL to create fast, user-friendly apps. Lets make
+        I am a full stack developer who builds web applications from front to
+        back. I work with React, Next JS, Express JS, Laravel and databases like
+        mySQL or PostgreSQL to create fast, user-friendly apps. Lets make
         something great together.
       </p>
 
@@ -38,7 +38,9 @@ const Header = () => {
           Contact Me
         </a>
         <a
-          href="#portofolio"
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center dark:text-[#E0E0E0]"
         >
           My Resume

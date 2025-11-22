@@ -8,7 +8,7 @@ export const infoList: IInfoList[] = [
   {
     icon: "/asset/code-icon.webp",
     title: "Languages",
-    description: "HTML, CSS, Javascript, PHP",
+    description: "Typescript, Javascript, PHP",
   },
   {
     icon: "/asset/edu-icon.webp",
@@ -17,8 +17,8 @@ export const infoList: IInfoList[] = [
   },
   {
     icon: "/asset/project-icon.webp",
-    title: "Projects",
-    description: "Built more than 3 projects",
+    title: "Framework",
+    description: "Next JS, Express JS, Laravel",
   },
 ];
 
@@ -26,8 +26,8 @@ export const toolsData = [
   "/asset/vscode.webp",
   "/asset/git.webp",
   "/asset/figma.webp",
-  "/asset/postgre.webp",
-  "/asset/firebase.webp",
+  "/asset/postman.png",
+  "/asset/sourcetree.png",
 ];
 
 interface ISkills {
@@ -40,17 +40,18 @@ export const skillsData: ISkills[] = [
   {
     icon: "/asset/frontend.webp",
     title: "Front-End",
-    description: "HTML, CSS, JavaScript, React, Angular",
+    description:
+      "HTML, CSS, JavaScript, Next JS, React, Tailwind CSS, Bootstrap",
   },
   {
     icon: "/asset/backend.webp",
     title: "Back-End",
-    description: "PHP, Laravel, Node.js, Express, Django, Ruby on Rails",
+    description: "PHP, Laravel, Node.js, Express, Prisma ORM, RESTful APIs",
   },
   {
     icon: "/asset/devops.webp",
     title: "DevOps & Tools",
-    description: "Docker, Git, Jenkins, AWS, CI/CD solutions",
+    description: "Git & GitHub, VS Code, Postman, Figma",
   },
 ];
 
@@ -64,56 +65,34 @@ interface IProject {
 export const projectData: IProject[] = [
   {
     id: 1,
-    title: "EcoShop Marketplace",
-    tech: "React, Node.js, MongoDB, Tailwind CSS",
-    bgImage: "/asset/project.webp",
+    title: "StayFinder",
+    tech: "NextJs, ExpressJS, PostgreSQL, Tailwind CSS",
+    bgImage: "/asset/StayFinder.webp",
     description:
-      "Developed a sustainable product marketplace to connect eco-friendly brands with conscious consumers, built with a responsive React frontend and Node.js backend, implementing secure payments and carbon footprint calculators which resulted in 120+ vendor signups within the first month.",
+      "StayFinder is a web-based platform designed to help users easily find accommodations while enabling property owners to promote their listings. The application provides a seamless experience for discovering, filtering, and booking lodging options, making the search process faster and more efficient for both tenants and users.",
   },
   {
     id: 2,
-    title: "HealthTrack Pro",
-    tech: "Vue.js, Firebase, Chart.js",
-    bgImage: "/asset/project.webp",
+    title: "Hafara",
+    tech: "Laravel, MySQL, Bootstrap",
+    bgImage: "/asset/Hafara.webp",
     description:
-      "Created a wellness dashboard for fitness enthusiasts to monitor workouts and nutrition, featuring real-time data visualization through Chart.js and Firebase integration, helping users achieve 30% better consistency in their health routines through personalized tracking.",
-  },
-  {
-    id: 3,
-    title: "CodeCollab IDE",
-    tech: "TypeScript, WebSockets, Monaco Edito",
-    bgImage: "/asset/project.webp",
-    description:
-      "Designed a browser-based collaborative coding environment with live pairing functionality using WebSockets, enabling remote teams to solve programming challenges together with shared cursor positions and instant code execution, now used by 15+ coding bootcamps.",
-  },
-  {
-    id: 4,
-    title: "UrbanBites Food Delivery",
-    tech: "Next.js, Stripe API, Mapbox",
-    bgImage: "/asset/project.webp",
-    description:
-      "Built a hyperlocal food delivery platform with real-time order tracking using Mapbox and Next.js ISR, reducing average delivery times by 25% through optimized route algorithms and vendor proximity matching in urban areas.Built a hyperlocal food delivery platform with real-time order tracking using Mapbox and Next.js ISR, reducing average delivery times by 25% through optimized route algorithms and vendor proximity matching in urban areas.",
+      "Hafara GuestHouse is an online room booking system developed to streamline guest reservations and simplify daily administrative tasks. The platform allows users to check room availability and make bookings online while providing staff with tools for managing reservations and generating basic operational reports.",
   },
 ];
 
 export const experience = [
   {
-    year: "2025 - Present",
-    role: "Full-Stack Web Developer",
-    company: "Tech 3",
-    responsibilities: "Responsibilities 3",
+    year: "2025",
+    role: "Full Stack Web Development Student",
+    company: "Purwadhika Digital School",
+    // responsibilities: "Responsibilities 3",
   },
   {
-    year: "2024",
-    role: "Junior Web Developer",
-    company: "Tech 2",
-    responsibilities: "Responsibilities 2",
-  },
-  {
-    year: "2020 - 2023",
-    role: "Web Developer Intern",
-    company: "Tech 1",
-    responsibilities: "Responsibilities 1",
+    year: "2020 - 2025",
+    role: "Information System Student",
+    company: "Andalas University",
+    // responsibilities: "Responsibilities 1",
   },
 ];
 
@@ -153,9 +132,18 @@ interface ISocmed {
   link: string;
 }
 export const socmed: ISocmed[] = [
-  { icon: "/asset/linkedin.webp", link: "https://www.linkedin.com/" },
-  { icon: "/asset/gmail.webp", link: "https://www.gmail.com/" },
-  { icon: "/asset/github.webp", link: "https://github.com/" },
-  { icon: "/asset/facebook.webp", link: "https://www.facebook.com/" },
-  { icon: "/asset/instagram.webp", link: "https://www.instagram.com/" },
+  {
+    icon: "/asset/linkedin.webp",
+    link: "https://www.linkedin.com/in/radithyaromero",
+  },
+  { icon: "/asset/gmail.webp", link: "mailto:radithya.romero@gmail.com" },
+  { icon: "/asset/github.webp", link: "https://github.com/RadithyaR" },
+  {
+    icon: "/asset/facebook.webp",
+    link: "https://www.facebook.com/radithya.romero.7/",
+  },
+  {
+    icon: "/asset/instagram.webp",
+    link: "https://www.instagram.com/radit_romero",
+  },
 ];
