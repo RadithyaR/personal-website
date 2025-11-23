@@ -38,7 +38,7 @@ const Header = () => {
           Contact Me
         </a>
         <a
-          href="/cv.pdf"
+          href="https://drive.google.com/drive/folders/1-PNXIXozDeoKa1iCCNRXVFMo4ZDBqbyK?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center dark:text-[#E0E0E0]"
